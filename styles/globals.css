@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 /* Background */
@@ -19,7 +20,6 @@ body {
   position: relative;
   background: var(--backgroundColor);
   width: 100%;
-  height: 180vh;
   background-size: 1440px 5382px;
 }
 
@@ -84,6 +84,7 @@ body {
 .mainContent {
   position: relative;
   z-index: 2;
+  padding: 115px 0 95px 203px;
 }
 
 /* Navbar */
@@ -115,15 +116,133 @@ body {
   -moz-border-radius: 32px;
   -ms-border-radius: 32px;
   -o-border-radius: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
 }
 
-.navbar-link i {
-  font-size: 30px;
-  color: var(--mainColor);
+.navbar-link img {
   cursor: pointer;
 }
 
-.navbar-link i.selected {
+.navbar-link img:hover{
   filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
   -webkit-filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
+}
+
+.navbar-link img.selected {
+  filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
+}
+/* 
+.navbar-link img.selected::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  height: 5px;
+  width: 5px;
+  background-color: #FFF;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+} */
+
+/* Card Slider */
+.cardSlider {
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0 23px 23px 0;
+  border-radius: 40px 0 0 0;
+  -webkit-border-radius: 40px 0 0 0;
+  -moz-border-radius: 40px 0 0 0;
+  -ms-border-radius: 40px 0 0 0;
+  -o-border-radius: 40px 0 0 0;
+}
+
+.cardSlider::-webkit-scrollbar {
+  background-color: var(--mainColor);
+  border-radius: 25px 0 0 25px;
+  -webkit-border-radius: 25px 0 0 25px;
+  -moz-border-radius: 25px 0 0 25px;
+  -ms-border-radius: 25px 0 0 25px;
+  -o-border-radius: 25px 0 0 25px;
+}
+
+.cardSlider::-webkit-scrollbar-thumb {
+  background-color: var(--primaryColor);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.listCard {
+  display: flex;
+  gap: 23px;
+  width: fit-content;
+}
+
+/* Inner Content */
+.innerContent {
+  width: 100%;
+  padding: 91px 30px 0 20px;
+}
+
+/* Top Chart */
+.topChart {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.topChart > span {
+  font-size: 31px;
+  font-weight: bold;
+  color: var(--primaryColor);
+  font-family: 'Rubik', sans-serif;
+}
+
+.wrapChart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listChart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Trending Song */
+.trendingSong {
+  width: 95%;
+  margin-top: 91px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.topTrending {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topTrending > span {
+  font-size: 31px;
+  font-weight: bold;
+  color: var(--primaryColor);
+  font-family: 'Rubik', sans-serif;
+}
+
+.listTrending {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

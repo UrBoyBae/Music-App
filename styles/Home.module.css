@@ -1,3 +1,253 @@
-.test {
-    color: white;
+/* Card */
+.card {
+    height: 373px;
+    width: 532px;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
 }
+
+.wave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.innerCard {
+    height: 373px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+.innerCard > p {
+    font-size: 18px;
+    font-family: 'QuickSand', sans-serif;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.titleCard {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.titleCard span {
+    color: #FFF;
+    font-family: 'QuickSand', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.titleCard > p {
+    font-size: 14px;
+    font-family: 'QuickSand', sans-serif;
+    color: #FFF;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 300px;
+}
+
+.bottomCard {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    color: #FFF;
+}
+
+.userProfile {
+    position: relative;
+    height: 32px;
+    width: 55px;
+}
+
+.userImage1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.userImage2 {
+    position: absolute; 
+    top: 0;
+    left: 20px; 
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.userImage3 {
+    position: absolute; 
+    top: 0;
+    left: 40px; 
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-family: 'QuickSand', sans-serif;
+}
+
+/* List Chart */
+.list {
+    width: 400px;
+    height: 96px;
+    background-color: #1A1E1F;
+    padding: 17px 21px 17px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.leftContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.chartImage {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.detailList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: fit-content;
+    font-family: 'QuickSand', sans-serif;
+}
+
+.titleList {
+    font-size: 17px !important;
+    color: #FFF !important;
+    font-weight: 400 !important;
+}
+
+.detailList > p {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, 50%);
+}
+
+.detailList > span {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.likeButton {
+    height: 37px;
+    width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255, 11%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.likeButton > i {
+    color: #FACD66;
+    font-size: 16px;
+}
+
+/* Trending Song */
+.buttonSeeAll {
+    background-color: #9B64E1;
+    width: 110px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.buttonSeeAll:hover {
+    outline: 1px solid #9B64E1;
+    background-color: #000;
+}
+
+.buttonSeeAll:hover > span {
+    color: #9B64E1 !important;
+}
+
+.buttonSeeAll > span {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+.cardTrending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.cardDetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cardDetail > i {
+    font-size: 25px;
+    color: #FFF;
+}
+
+.cardDetail > span {
+    font-size: 22px;
+    color: #FFF;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+

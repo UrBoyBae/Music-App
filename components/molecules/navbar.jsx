@@ -3,11 +3,27 @@ import React from "react";
 const navbar = () => {
   return (
     <div className="navbar">
-      Spotify
+      MusicHub
       <div className="navbar-link">
-        <i class="material-symbols-rounded selected">home</i>
-        <i class="material-symbols-rounded">library_music</i>
-        <i class="material-symbols-rounded">category</i>
+        <img
+              className="selected"
+              src="/images/home.png"
+              width="23"
+              height="25"
+              alt="userImage"
+            />
+        <img
+              src="/images/search.png"
+              width="30"
+              height="30"
+              alt="userImage"
+            />
+        <img
+              src="/images/category.png"
+              width="28"
+              height="28"
+              alt="userImage"
+            />
       </div>
     </div>
   );
